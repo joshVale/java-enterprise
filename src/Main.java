@@ -71,5 +71,26 @@ public class Main {
         int y = 2026;
         System.out.println(y + " високосный? " + isYear(y));
 
+        // ===== Lesson2 =====
+
+        Lesson2.changeZerotoOne(new int[]{0,0,1,0,1});
+
+        Lesson2.printArr();
+
+        int[] num = {1,5,3,2,11,4,5,2,4,8,9,1};
+        int[] res = Lesson2.giveArr(num);
+        for(int i : res) System.out.print(i + " ");
+        System.out.println();
+
+        int[][] arr = new int[3][3];
+        Lesson2.fillDiagonals(arr);
+
+        int[] my = Lesson2.ArrValue(5, 3);
+        for(int i : my) System.out.print(i + " ");
+        System.out.println();
+
+        Lesson2.minMax(new int[]{5,3,2,7,9});
+
+        System.out.println(Lesson2.checkBalance(new int[]{1,1,1,2,1}));
     }
 }
