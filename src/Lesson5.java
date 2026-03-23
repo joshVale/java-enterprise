@@ -9,7 +9,7 @@ public class Lesson5 {
         return ans;
     }
 
-    public static void shakSort(int[] myarr){
+    public static void shakerSort(int[] myarr){
         Boolean swap = true;
         int start =0;
         int end = myarr.length-1;
@@ -47,7 +47,7 @@ public class Lesson5 {
             System.out.print(i+" ");
 
         System.out.println(" ");
-        shakSort(myarr);
+        shakerSort(myarr);
         for(int i:myarr)
             System.out.print(i+" ");
     }
