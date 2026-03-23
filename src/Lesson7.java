@@ -2,7 +2,9 @@ public class Lesson7 {
     public static int indSymbolOccurance(String s,char ch){
         int count =0;
         for(int i=0;i<s.length();i++) {
-            if(s.charAt(i)==ch)count++;
+            if (s.charAt(i)==ch) {
+                count++;
+            }
         }
         return count;
     }
@@ -11,21 +13,26 @@ public class Lesson7 {
             String tmp = "";
             for(int j=i;j<source.length();j++){
                 tmp+=source.charAt(j);
-                if(tmp.equals(target))return i;
+                if (tmp.equals(target)){
+                    return i;
+                }
             }
         }
         return -1;
     }
     public static String stringReverse(String s){
-        String ans = "";
-        for(int i=s.length()-1;i>-1;i--){
-            ans+=s.charAt(i);
-        }
-        return ans;
+        StringBuilder ans = new StringBuilder(s);
+        return ans.reverse().toString();
     }
 
     public static boolean  isPalindrome(String s){
-        if(s.equals(stringReverse(s)))return true;
-        return false;
+        int l = 0;
+        int r = s.length()-1;
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r))return false;
+            l++;
+            r--;
+        }
+        return true;
     }
 }
