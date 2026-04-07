@@ -1,3 +1,6 @@
+import package3.Animal;
+import package3.Cat;
+import package3.Dog;
 
 public class Main {
 
@@ -92,5 +95,23 @@ public class Main {
         Lesson2.minMax(new int[]{5,3,2,7,9});
 
         System.out.println(Lesson2.checkBalance(new int[]{1,1,1,2,1}));
+
+
+        Dog dog1 = new Dog("Корги");
+        Dog dog2 = new Dog("Рекс");
+        Cat cat1 = new Cat("Барсик");
+
+        dog1.run(150);
+        dog1.swim(5);
+
+        dog2.run(600);
+        dog2.swim(15);
+
+        cat1.run(180);
+        cat1.swim(2);
+
+        System.out.println("Животных создано: " + Animal.getAnimalCount());
+        System.out.println("Собак создано: " + Dog.getDogCount());
+        System.out.println("Котов создано: " + Cat.getCatCount());
     }
 }
